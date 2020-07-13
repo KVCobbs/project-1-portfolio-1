@@ -1,0 +1,44 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: darkblue;
+    text-align: center;
+
+}
+#contain{
+    width: 620px;
+    background-color: white;
+}
+nav{
+    display: grid;
+    grid-template-columns: [a] 5fr [b] 1fr [c] 1fr[d];
+    background-color: grey;
+    border: 1.5px black solid;
+
+}
+.image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+img {
+    width: 400px;
+    height: 400px;
+}
+#logo{
+    font-size: 50px;
+}
+.lines {
+    width: 85%;
+    border-bottom: 2px black solid;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.lines:nth-child(2){
+    margin: auto;
+    width: 65%;
+}
