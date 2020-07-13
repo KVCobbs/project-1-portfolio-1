@@ -56,21 +56,25 @@ p{
 }
 .slider{
     display: flex;
-    width: 300px;
+    width: 400px;
     height: 300px;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;
 }
-.slides > div {
-    scroll-snap-align: start;
+.slider > div {
+    scroll-snap-align: center;
 }
 .slide{
-    width: 300px;
+    width: 400px;
     flex-shrink: 0;
     height: 100%;
 }
 .slide > img {
     height: 300px;
-    width: 300px;
+    width: 400px;
+}
+a {
+    width: 20px;
+    height: 20px;
 }
