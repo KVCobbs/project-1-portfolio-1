@@ -3,12 +3,13 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: darkblue;
-    text-align: center;
-
+    
 }
 #contain{
     width: 620px;
     background-color: white;
+    text-align: center;
+    margin: auto;
 }
 nav{
     display: grid;
@@ -74,7 +75,16 @@ p{
     height: 300px;
     width: 400px;
 }
-a {
-    width: 20px;
-    height: 20px;
+#jump {
+    margin-bottom: 10px;
+}
+#jump > div {
+    display: inline-block;
+    width: 50px;
+    background-color: lightgray;
+    border-radius: 64px;
+}
+.descriptions{
+    text-align: center;
+    width: 500px;
 }
