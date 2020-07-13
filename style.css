@@ -49,3 +49,28 @@ img {
 p{
     padding: 10px;
 }
+/*css Carousel*/
+.carousel {
+    display: flex;
+    justify-content: center;
+}
+.slider{
+    display: flex;
+    width: 300px;
+    height: 300px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+}
+.slides > div {
+    scroll-snap-align: start;
+}
+.slide{
+    width: 300px;
+    flex-shrink: 0;
+    height: 100%;
+}
+.slide > img {
+    height: 300px;
+    width: 300px;
+}
