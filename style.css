@@ -50,6 +50,11 @@ img {
 p{
     padding: 10px;
 }
+.projects{
+    background-color: gray;
+    width: 620px;
+    padding: 10px 0;
+}
 /*css Carousel*/
 .carousel {
     display: flex;
@@ -77,8 +82,10 @@ p{
 }
 #jump {
     margin-bottom: 10px;
+    text-align: center;
 }
 #jump > div {
+    text-align: center;
     display: inline-block;
     width: 50px;
     background-color: lightgray;
@@ -86,5 +93,11 @@ p{
 }
 .descriptions{
     text-align: center;
+    background-color: darkgrey;
+    margin: 20px auto;
     width: 500px;
+}
+.descriptions > img {
+    width: 100px;
+    height: 100px;
 }
