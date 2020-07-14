@@ -42,10 +42,13 @@ fetch(url)
     
     //function
     const manualDis = function(x) {
+        $('#temp').remove()
+        
         x-= 1
-        const $projectDiv = createProjectElement(data[x])
-        $('.description').append($projectDiv)
-
+        $projectDiv = createProjectElement(data[x])
+        $projectDiv.attr('id', 'temp')
+        $('.descriptions').prepend($projectDiv)
+        
             // switch(true){
             // case (x == 1):
             //     const $projectDiv = createProjectElement(data[x])
@@ -74,6 +77,8 @@ fetch(url)
         i += 1
         const $a = $('<a>').text(`${i}`).attr('href',`#${i}`).on('click', () => manualDis(i)) //anonymous function
         const $div = $('<div>').append($a)
+        $(`a.${i}`).attr('href', `#${i + 1}`).on('click', () => manualDis(i+1))
+        $('a.5').attr('href', '#1').on('click', () => manualDis(1))
         $('#jump').append($div)
     });   
     

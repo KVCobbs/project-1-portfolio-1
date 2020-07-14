@@ -10,3 +10,6 @@ const hide = function(){
     $('.icon').show()
 }
 
+function test(){
+    console.log('Clicky')
+}
