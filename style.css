@@ -5,7 +5,7 @@ body {
     background-color: darkblue;
     
 }
-#contain{
+#contain, .contact{
     width: 620px;
     background-color: white;
     text-align: center;
@@ -60,7 +60,7 @@ p{
 }
 
 
-.projects{
+.projects, footer{
     background-color: gray;
     width: 620px;
     padding: 10px 0;
@@ -113,5 +113,43 @@ p{
     margin: 10px 0;
 }
 .space {
-    height: 50px;
+    height: 20px;
+}
+.contact {
+    text-align: left;
+    margin: 0 15px;
+}
+h2 {
+    text-align: center;
+}
+.contact > p {
+    margin: 0 25px;
+}
+.message {
+    width: 85%;
+    margin: 0 35px;
+    height: 100px;
+    border-radius: 8px;
+}
+input{
+    width: 85%;
+    margin: 0 35px;
+}
+button {
+    display: block;
+    margin: 20px 0 15px 35px;
+}
+
+
+footer{
+    display: grid;
+    grid-template-columns: [a] 1fr [b] 1fr [c];
+    text-align: center;
+    
+}
+.one > img {
+    margin: 0 10px;
+}
+.two > img {
+    margin: 0 auto;
 }
