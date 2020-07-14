@@ -7,6 +7,12 @@
 
 const url = 'https://spreadsheets.google.com/feeds/list/1L-41kQAND4wxOdAVPq1EVSBNMyOmeAmthOdraPwCpRs/od6/public/values?alt=json'
 
+//contact api stuff
+//1XPBFwhTM6bRryjSDFnR0tyxa9RPAH1CUh3eT2mGa2ZU
+
+const url = 'https://spreadsheets.google.com/feeds/list/1XPBFwhTM6bRryjSDFnR0tyxa9RPAH1CUh3eT2mGa2ZU/od6/public/values?alt=json' 
+
+
 fetch(url)
     .then( response => response.json())
     .then (data => {
@@ -39,7 +45,6 @@ fetch(url)
     }
 
     //$('body').append(createProjectElement(data[0]))
-    
     //function
     const manualDis = function(x) {
         $('#temp').remove()
