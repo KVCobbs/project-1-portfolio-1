@@ -1,8 +1,9 @@
 .contain {
     display: grid;
+    text-align: center;
     height: 1000px;
      grid-template-columns: [a] 1fr [b] 1fr [c];
-    grid-template-rows: [d] 1fr [e] 1fr [f] 1fr [g];
+    grid-template-rows: [d] 1fr [e] 1fr [f] 1fr [g] 1fr [h];
 }
 nav {
     background-color: grey;
@@ -16,18 +17,39 @@ nav {
 }
 .image{
     margin: 0 auto;
-    grid-column: b/c ;
+    grid-column: b/c;
 }
 .image > img {
     height: 600px;
     
 }
 h2 {
+    font-size: 5rem;
+    margin: 0;
     grid-column: b/c;
 }
-
-
-
+.content {
+    display: none;
+}
+.bigtext {
+    grid-column: a/b;
+    grid-row: e/h;
+}
+.info {
+    grid-row: g/h;
+    grid-column: b/c;
+}
+.bigtext > h3 {
+    position: relative;
+    top: 200px;
+}
+.skills {
+    position: relative;
+    top: 250px;
+}
+.skills >img {
+    height: 100px;
+}
 
 
 
