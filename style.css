@@ -17,14 +17,18 @@ nav{
     background-color: grey;
     border: 1.5px black solid;
     text-align: left;
-
 }
-.navbutton {
+.navb {
     display:none;
 }
+.icon{
+    grid-column: c/d;
+    justify-self: end;
+}
 .icon > img {
-    height: 100px;
-    width: 100px;
+    height: 50px;
+    width: 50px;
+    padding: 0 10px;
 }
 .image{
     display: flex;
