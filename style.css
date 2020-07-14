@@ -1,3 +1,30 @@
+.contain {
+    display: grid;
+    height: 1000px;
+     grid-template-columns: [a] 1fr [b] 1fr [c];
+    grid-template-rows: [d] 1fr [e] 1fr [f] 1fr [g];
+}
+nav {
+    background-color: grey;
+    height: 100px;
+    width: 100%;
+    grid-row: d/e;
+    grid-column: a/ c;
+}
+.icon > img {
+    display: none;
+}
+.image{
+    margin: 0 auto;
+    grid-column: b/c ;
+}
+.image > img {
+    height: 600px;
+    
+}
+h2 {
+    grid-column: b/c;
+}
 
 
 
