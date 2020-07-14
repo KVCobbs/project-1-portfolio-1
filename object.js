@@ -39,9 +39,42 @@ fetch(url)
     }
 
     //$('body').append(createProjectElement(data[0]))
-    data.forEach( project => {
-        const $projectDiv = createProjectElement(project)
-        $('body').append($projectDiv)
-    })
-}
+    
+    //function
+    const manualDis = function(x) {
+        x-= 1
+        const $projectDiv = createProjectElement(data[x])
+        $('.description').append($projectDiv)
 
+            // switch(true){
+            // case (x == 1):
+            //     const $projectDiv = createProjectElement(data[x])
+            // $('body').append($projectDiv)
+            // break;
+            // case (x == 2):
+            //     const $projectDiv = createProjectElement(project)
+            // $('body').append($projectDiv)
+            // break;
+            // case (x == 3): 
+            //     const $projectDiv = createProjectElement(project)
+            //     $('body').append($projectDiv)
+            // break;
+            // case (x == 4) :
+            //       const $projectDiv = createProjectElement(project)
+            //     $('body').append($projectDiv)
+            // break;
+            // case (x == 5):
+            //     const $projectDiv = createProjectElement(project)
+            // $('body').append($projectDiv)
+            // break
+        };
+        
+    //creates the buttons dynamically!
+    data.forEach((element, i) => {
+        i += 1
+        const $a = $('<a>').text(`${i}`).attr('href',`#${i}`).on('click', () => manualDis(i)) //anonymous function
+        const $div = $('<div>').append($a)
+        $('#jump').append($div)
+    });   
+    
+}
