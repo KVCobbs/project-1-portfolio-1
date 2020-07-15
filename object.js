@@ -48,6 +48,7 @@ fetch(url)
     //function
     const manualDis = function(x) {
         $('#temp').remove()
+        $('#import').remove()
         
         x-= 1
         $projectDiv = createProjectElement(data[x])
