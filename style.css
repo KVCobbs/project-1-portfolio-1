@@ -3,8 +3,8 @@ nav {
     justify-content: space-evenly;
     margin: 0 auto;
     background-color: grey;
-    height: 90px;
-    width: 90%;
+    height: 60px;
+    width: 100%;
 }
 nav > a {
     font-size: 30px;
@@ -21,7 +21,7 @@ nav > a {
     text-align: center;
     width: 90%;
     margin: 0 auto;
-     grid-template-columns: [a] 1fr [b] .5fr [c];
+    grid-template-columns: [a] 1fr [b] .5fr [c];
     grid-template-rows: [d] .25fr [e] .25fr [f] .50fr [g];
 }
 
@@ -32,7 +32,7 @@ nav > a {
 }
 .image > img {
     margin-top: 20px;
-    height: 400px;
+    height: 350px;
     
 }
 h2 {
@@ -51,6 +51,7 @@ h2 {
 .bigtext > p {
     margin: 0 20px;
     font-size: 20px;
+    text-align: left;
 }
 .info {
     grid-row: f/g;
@@ -91,8 +92,6 @@ h2 {
 }
 /*css Carousel*/
 #jump {
-    margin-top: 40px;
-    margin-bottom: 10px;
     text-align: center;
     grid-row: c/d;
     grid-column: a/b;
@@ -113,6 +112,7 @@ h2 {
     height: 75%;
     grid-row: b/c;
     grid-column: a/b;
+    margin: 0;
 }
 .slider{
     display: flex;
