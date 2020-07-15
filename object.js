@@ -12,16 +12,6 @@ const url = 'https://spreadsheets.google.com/feeds/list/1L-41kQAND4wxOdAVPq1EVSB
 
 const form = 'https://spreadsheets.google.com/feeds/list/1XPBFwhTM6bRryjSDFnR0tyxa9RPAH1CUh3eT2mGa2ZU/od6/public/values?alt=json' 
 
-const $googleName = "entry.2005620554";
-const $googleEmail ="entry.1045781291" 
-const $googlePhone = "entry.1166974658" 
-const $googleMessage = "entry.839337160" 
-
-console.log($googleMessage, $googleName)
-
-$('.submit').on('click', getInput())
-
-
 
 fetch(url)
     .then( response => response.json())
@@ -99,3 +89,38 @@ fetch(url)
     });   
     
 }
+const formUrl ='https://docs.google.com/forms/d/e/1FAIpQLScsTb_KYv-caQdX2XCAB-tP3y0bwgFzWXxpV1cTYTb0eBRcDA/viewform?'
+
+const formSubmit = () => {
+    
+    //tags
+    const nameTag = "entry.2005620554"
+    const emailTag = "entry.1045781291" 
+    const phoneTag = "entry.1166974658" 
+    const messageTag = "entry.839337160" 
+    //user values
+    let name = $('.name')
+    let email = $('.email')
+    let phone = $('.phone')
+    let message = $('.message')
+
+    //scary stuff!!
+    fetch(formUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+            'Content-Type':'application/x-www-form-urlencoded'
+        },
+        body: `${nameTag}=${name.val()}&${emailTag}=${email.val()}&${messageTag}=${message.val()}`
+    })
+    .then(res => {
+          // clear the fields and give the user feedback
+          console.log(res.body);
+          name.val('');
+          email.val('');
+          message.val('');
+          $('.confirmation').text('Your message has been sent. Thanks!') 
+          })
+      .catch(err => console.log(err))
+}
+  $('button').on('click', () => formSubmit())
