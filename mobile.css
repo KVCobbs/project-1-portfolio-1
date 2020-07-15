@@ -162,5 +162,42 @@
         background-color: lightgray;
         border-radius: 64px;
     }
-
+    .descriptions > img, .skills > img {
+        width: 100px;
+        height: 100px;
+        margin: 10px 0;
+    }
+    .space {
+        height: 20px;
+    }
+    /*Last page*/
+    .contact > p {
+        margin: 0 25px;
+    }
+    .message {
+        width: 85%;
+        margin: 0 35px;
+        height: 100px;
+        border-radius: 8px;
+    }
+    input{
+        width: 85%;
+        margin: 0 35px;
+    }
+    button {
+        display: block;
+        margin: 20px 0 15px 35px;
+    }
+    footer{
+        display: grid;
+        grid-template-columns: [a] 1fr [b] 1fr [c];
+        text-align: center;
+        
+    }
+    .one > img {
+        margin: 0 10px;
+    }
+    .two > img {
+        margin: 0 auto;
+    }
 }
