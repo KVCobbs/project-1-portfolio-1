@@ -1,0 +1,185 @@
+
+@media only screen and (max-width: 700px){
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: darkblue;
+        margin: 0;
+        font-size: 10px;
+        width: 90%;
+        
+    }
+    .contain, .contact{
+        display: block;
+        width: 90%;
+        background-color: white;
+        text-align: center;
+        margin: 0 auto;
+    }
+    nav{
+        display: grid;
+        grid-template-columns: [a] 5fr [b] 1fr [c] 1fr[d];
+        background-color: grey;
+        border: 1.5px black solid;
+        text-align: left;
+        height: 50px;
+        width: 90%;
+    
+    }
+    .navb {
+        display:none;
+    
+    }
+    .icon{
+        grid-column: c/d;
+        justify-self: end;
+    }
+    .icon > img {
+        height: 20%;
+        width: 20%;
+        padding: 0 10px;
+    }
+    .image{
+        height: 25%;
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        margin: 0;
+    }
+    img {
+        width: 50px;
+        height: 10px;
+    }
+    #logo{
+        position: relative;
+        bottom: 15px;
+        margin: 0 ;
+        font-size: 50px;
+    }
+    .lines {
+        display: block;
+        width: 85%;
+        border-bottom: 2px black solid;
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+    .lines:nth-child(2){
+        margin: auto;
+        width: 65%;
+    }
+    p{
+        padding: 10px;
+    }
+    .skills{
+        display: flex;
+        flex-wrap: wrap;
+        height: 300px;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+
+    .projects, footer{
+        background-color: gray;
+        width: 620px;
+        padding: 10px 0;
+        width: 90%;
+    }
+    /*css Carousel*/
+    .carousel {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        width: 90%;
+    }
+    .slider{
+        display: flex;
+        width: 90%;
+        height: 300px;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        margin: auto;
+    }
+    .slider > div {
+        scroll-snap-align: center;
+    }
+    .slide{
+        width: 400px;
+        flex-shrink: 0;
+        height: 100%;
+    }
+    .slide > img {
+        height: 300px;
+        width: 400px;
+    }
+    #jump {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    #jump > div {
+        text-align: center;
+        display: inline-block;
+        width: 50px;
+        background-color: lightgray;
+        border-radius: 64px;
+    }
+    .descriptions{
+        text-align: center;
+        background-color: darkgrey;
+        margin: 20px auto;
+        width: 100%;
+    }
+    .descriptions > img, .skills > img {
+        width: 100px;
+        height: 100px;
+        margin: 10px 0;
+    }
+    .space {
+        height: 20px;
+    }
+    .contact {
+        text-align: left;
+        margin: 0 ;
+        width: 90%;
+    }
+    h2 {
+        text-align: center;
+    }
+    .contact > p {
+        margin: 0 25px;
+    }
+    .message {
+        width: 85%;
+        margin: 0 35px;
+        height: 100px;
+        border-radius: 8px;
+    }
+    input{
+        width: 85%;
+        margin: 0 35px;
+    }
+    button {
+        display: block;
+        margin: 20px 0 15px 35px;
+    }
+
+
+    footer{
+        display: grid;
+        grid-template-columns: [a] 1fr [b] 1fr [c];
+        text-align: center;
+        
+    }
+    .one > img {
+        margin: 0 10px;
+    }
+    .two > img {
+        margin: 0 auto;
+    }
+}
