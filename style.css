@@ -75,18 +75,26 @@ h2 {
 .skills >img {
     height: 100px;
 }
-
+/*PAGE TWO*/
 .projects {
     width: 90%;
     margin: 0 auto;
     display: grid;
+    text-align: center;
+    grid-template-rows: [a] .25fr [b] 1fr [c] .25fr[d];
+    grid-template-columns: [a]1fr[b]1fr[c];
 }
- 
+.projects > h2 {
+    grid-row: a/b;
+    grid-column: a/b;
+}
 /*css Carousel*/
 #jump {
-    margin-top: 20px;
+    margin-top: 40px;
     margin-bottom: 10px;
     text-align: center;
+    grid-row: c/d;
+    grid-column: a/b;
 }
 #jump > div {
     text-align: center;
@@ -101,6 +109,8 @@ h2 {
     flex-direction: column;
     align-content: center;
     width: 100%;
+    grid-row: b/c;
+    grid-column: a/b;
 }
 .slider{
     display: flex;
@@ -128,8 +138,10 @@ h2 {
 .descriptions{
     text-align: center;
     background-color: darkgrey;
-    margin: 20px auto;
-    width: 100%;
+    width: 80%;
+    margin: auto;
+    grid-row: a/d;
+    grid-column: b/c;
 }
 .descriptions > img, .skills > img {
     width: 100px;
