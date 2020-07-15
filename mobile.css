@@ -1,0 +1,66 @@
+@media only screen and (max-width: 700px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: darkblue;
+        margin: 0;
+        font-size: 10px;
+        width: 90%;
+        
+    }
+    .contain, .contact{
+        display: block;
+        width: 90%;
+        background-color: white;
+        text-align: center;
+        margin: 0 auto;
+    }
+    nav{
+        display: grid;
+        grid-template-columns: [a] 5fr [b] 1fr [c] 1fr[d];
+        background-color: grey;
+        border: 1.5px black solid;
+        text-align: left;
+        height: 50px;
+        width: 90%;
+    }
+    nav > a{
+        font-size: 20px;
+        padding: 10px 10px;
+    }
+    .icon {
+        display: block;
+        grid-column: c/d;
+        justify-self: end;
+    }
+    .icon > img {
+        height: 100%;
+        width: 80%;
+    }
+    .navb {
+        display:none;
+    }
+    .image{
+        height: 25%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        margin: 0;
+    }
+    #logo{
+        position: relative;
+        bottom: 15px;
+        margin: 0 ;
+        font-size: 50px;
+}
+ .lines {
+        display: block;
+        width: 85%;
+        border-bottom: 2px black solid;
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
