@@ -1,26 +1,36 @@
 .contain {
     display: grid;
     text-align: center;
-    height: 1000px;
+    width: 90%;
+    margin: 0 auto;
      grid-template-columns: [a] 1fr [b] 1fr [c];
-    grid-template-rows: [d] .25fr [e] 1fr [f] .25fr [g] 1fr [h];
+    grid-template-rows: [d] .25fr [e] .25fr [f] .50fr [g];
 }
 nav {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
     background-color: grey;
-    height: 100px;
-    width: 100%;
-    grid-row: d/e;
-    grid-column: a/ c;
+    height: 90px;
+    width: 90%;
 }
-.icon > img {
+nav > a {
+    font-size: 30px;
+    
+}
+
+a:first-child {
     display: none;
 }
+
+
 .image{
-    margin: 0 auto;
+    margin: auto;
     grid-column: b/c;
-    grid-row: e/f;
+    grid-row: d/e;
 }
 .image > img {
+    margin-top: 20px;
     height: 400px;
     
 }
@@ -34,17 +44,26 @@ h2 {
 }
 .bigtext {
     grid-column: a/b;
-    grid-row: e/h;
+    grid-row: d/g;
     border-right: 2px black solid;
 }
+
+.bigtext > p {
+    margin: 0 20px;
+    font-size: 25px;
+}
 .info {
-    grid-row: g/h;
+    grid-row: f/g;
     grid-column: b/c;
+}
+.info > h3 {
+    position: relative;
+    top: 20px;
 }
 .bigtext > h3 {
     position: relative;
-    font-size: 75px;
-    top: 50px;
+    font-size: 55px;
+    top: 30px;
   
 }
 .skills {
