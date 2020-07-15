@@ -111,7 +111,7 @@ const formSubmit = () => {
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
         },
-        body: `${nameTag}=${name.val()}&${emailTag}=${email.val()}&${phoneTag}=${phone.val()}$${messageTag}=${message.val()}`
+        body: `${nameTag}=${name.val()}&${emailTag}=${email.val()}&${phoneTag}=${phone.val()}&${messageTag}=${message.val()}`
     })
     .then(res => {
           // clear the fields and give the user feedback
