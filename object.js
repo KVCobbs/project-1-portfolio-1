@@ -12,6 +12,16 @@ const url = 'https://spreadsheets.google.com/feeds/list/1L-41kQAND4wxOdAVPq1EVSB
 
 const form = 'https://spreadsheets.google.com/feeds/list/1XPBFwhTM6bRryjSDFnR0tyxa9RPAH1CUh3eT2mGa2ZU/od6/public/values?alt=json' 
 
+const $googleName = "entry.2005620554";
+const $googleEmail ="entry.1045781291" 
+const $googlePhone = "entry.1166974658" 
+const $googleMessage = "entry.839337160" 
+
+console.log($googleMessage, $googleName)
+
+$('.submit').on('click', getInput())
+
+
 
 fetch(url)
     .then( response => response.json())

@@ -55,12 +55,62 @@
         margin: 0 ;
         font-size: 50px;
 }
- .lines {
+    .content{
         display: block;
-        width: 85%;
-        border-bottom: 2px black solid;
-        margin-bottom: 20px;
-        margin-left: auto;
-        margin-right: auto;
     }
+    .lines {
+            width: 85%;
+            border-bottom: 2px black solid;
+            margin-bottom: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    .lines:nth-child(2){
+        margin: auto;
+      
+        width: 65%;
+    }
+    .info > h1 {
+        font-size: 15px;
+    }
+    .info > h3 {
+        font-size: 15px;
+    }
+    p{
+        margin: 10px;
+        padding: 10px;
+    }
+    .bigtext {
+        display: block;
+        margin: 30px 0px 0px 0px;
+        border: none;
+    }
+    .bigtext > h3 {
+       display: none;
+    }
+    .skills{
+        display: flex;
+        flex-wrap: wrap;
+        height: 200px;
+        width: 100%;
+        justify-content: space-around;
+    }
+    .skills > img {
+        height: 80px;
+    }
+    .skills > img:first-child {
+        height: 90px;
+        margin-bottom: 5px;
+        margin-top: 0;
+    }
+    .skills > img:nth-child(2) {
+        height: 70px;
+        width: 70px;
+    }
+    .skills > img:nth-child(3) {
+        height: 70px;
+        margin-bottom: 0 ;
+        margin-top: 25px;
+    }
+
 }
