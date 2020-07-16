@@ -32,18 +32,18 @@ fetch(url)
     const app = (data) => {
         console.log('app is running')
         console.log(data)
-    
+
 
     const  createProjectElement  = (project) => {
         const $div = $('<div>')
         $div.append($('<h2>').text(project.title))
-        console.log(project.title)
         $div.append($('<p>').text(project.description))
-        //$div.append($('<img>').attr('src', project.image))
+        $('.hold').attr('src', project.image)
         $div.append($('<a>').attr('href', project.url).text('link'))
-        return $div
+        return ($div)
     }
-
+        
+        
     //$('body').append(createProjectElement(data[0]))
     //function
     const manualDis = function(x) {
@@ -62,7 +62,7 @@ fetch(url)
             // break;
             // case (x == 2):
             //     const $projectDiv = createProjectElement(project)
-            // $('body').append($projectDiv)
+            // $('body').append($projectD0iv)
             // break;
             // case (x == 3): 
             //     const $projectDiv = createProjectElement(project)
