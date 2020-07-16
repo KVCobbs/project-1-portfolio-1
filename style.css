@@ -1,8 +1,13 @@
-:root{
-    --main-color:#ffca28;
-    --main-variant:#c79a00;
-}
 
+
+ :root{
+    --main-color:#ffca28;
+    --main-light:#fffd61;
+    --main-variant:#c79a00;
+    --accent-main:#80deea;
+    --accent-light:#b4ffff;
+    --accent-variant:#4bacb8;
+}
 nav {
     display: flex;
     justify-content: space-evenly;
