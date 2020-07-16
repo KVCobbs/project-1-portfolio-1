@@ -25,8 +25,10 @@ $($menuBtn).on('click', () =>{
     if(!menuOpen) {
         $menuBtn.attr('class', 'menub open')
         menuOpen = true;
+        display()
     }else {
         $menuBtn.attr('class', 'menub')
         menuOpen = false;
+        hide()
     }
 })
