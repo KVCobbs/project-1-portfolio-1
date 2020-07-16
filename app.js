@@ -19,3 +19,14 @@ function test(){
 //     console.log(name, email, phone, message)
 // }
 
+const $menuBtn = $('.menub')
+let menuOpen = false;
+$($menuBtn).on('click', () =>{
+    if(!menuOpen) {
+        $menuBtn.attr('class', 'menub open')
+        menuOpen = true;
+    }else {
+        $menuBtn.attr('class', 'menub')
+        menuOpen = false;
+    }
+})

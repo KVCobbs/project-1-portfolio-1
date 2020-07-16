@@ -1,7 +1,11 @@
 @media only screen and (max-width: 700px) {
     :root{
         --main-color:#ffca28;
+        --main-light:#fffd61;
         --main-variant:#c79a00;
+        --accent-main:#80deea;
+        --accent-light:#b4ffff;
+        --accent-variant:#4bacb8;
     }
     
     body {
@@ -32,17 +36,13 @@
         text-align: left;
         height: 60px;
         width: 100%;
+        margin: 0;
     }
     nav > a{
         font-size: 20px;
         padding: 10px 10px;
     }
-    .icon {
-        display: block;
-        grid-column: c/d;
-        position:relative;
-        bottom:5px;  
-    }
+
 /*Hamburger stuff*/ 
     .menub{
         position: relative;
@@ -53,12 +53,13 @@
         height: 80px;
         cursor: pointer;
         transition: all .5s ease-in-out;
-        border: 3px solid black;
+        grid-column: c/d;
+        bottom: 10px;
     }
     .burger{
         width: 50px;
         height: 6px;
-        background:#fff;
+        background: var(--accent-variant);
         border-radius: 5px;
         box-shadow: 0 2px 5px rgba(255,100, 47, .2);
         transition: all .5s ease-in-out;
@@ -68,16 +69,28 @@
         position: absolute;
         width: 50px;
         height: 6px;
-        background:#fff;
+        background:var(--accent-variant);
         border-radius: 5px;
         box-shadow: 0 2px 5px rgba(255,100, 47, .2);
         transition: all .5s ease-in-out;
     }
     .burger::before {
-     transform: translateY(-16px); 
+        transform: translateY(-16px); 
     }
     .burger::after {
         transform:translateY(16px);
+    }
+    /*Animation*/
+    .menub.open .burger {
+        transform: translateX(-50px);
+        background: transparent;
+        box-shadow: none;
+    }
+    .menub.open .burger::before {
+        transform: rotate(45deg) translate(35px, -35px);
+    }
+    .menub.open .burger::after {
+        transform: rotate(-45deg) translate(35px, 35px);
     }
 /*Hamburger end*/
     .icon > img {

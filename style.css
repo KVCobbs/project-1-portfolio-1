@@ -1,3 +1,8 @@
+:root{
+    --main-color:#ffca28;
+    --main-variant:#c79a00;
+}
+
 nav {
     display: flex;
     justify-content: space-evenly;
@@ -76,8 +81,7 @@ h2 {
 }
 .skills >img {
     height: 50%;
-    width: 50
-%;
+    width: 50%;
 }
 /*PAGE TWO*/
 .projects {
