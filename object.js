@@ -33,15 +33,17 @@ fetch(url)
         console.log('app is running')
         console.log(data)
 
-
+    //Description generator
         const  createProjectElement  = (project) => {
         const $div = $('<div>')
         $div.append($('<h2>').text(project.title))
         $div.append($('<p>').text(project.description))
         $div.append($('<a>').attr('href', project.url).text('link'))
+        //alter main page
+        
         return ($div)
         }
-        
+    //project image    
         const  createProjectImage  = (project) => {
             let $a = $('<a>') 
             let $img =$('<img>').attr('src', project.image)
@@ -50,37 +52,54 @@ fetch(url)
             }
         
         
-        
+    //Makes descriptions show up! 
         const manualDis = function(x) {
             $('#temp').remove()
             $('#import').remove()
-            
+            console.log(`this is x: ${x}`) 
             x-= 1
+            console.log(`this is x after: ${x}`)
             $projectDiv = createProjectElement(data[x])
             $projectDiv.attr('id', 'temp')
             $('.descriptions').prepend($projectDiv)
-            
+        //slider reset    
+            // if (x > $('.slider').children().length -1 ){
+            //     x = 1
+            //     $projectDiv = createProjectElement(data[x])
+            //     $projectDiv.attr('id', 'temp')
+            //     $('.descriptions').prepend($projectDiv)
+            // }
             };
             
         //creates the buttons dynamically!
+       
         data.forEach((element, i) => {
+            console.log(`this is i: ${i}`)
             i += 1
+            console.log(`this is i after: ${i}`)
             const $a = $('<a>').text(`${i}`).attr('href',`#${i}`).on('click', () => manualDis(i)) //anonymous function
             const $div = $('<div>').append($a)
             $('#jump').append($div)
 
         //This part makes image into slide
-            const $slide = createProjectImage(element).attr('class', `${i}`).on('click', () => manualDis(i+1))
-            const $divx = $('<div>').attr('id', `${i}`).attr('class', 'slide')
            
-            //$('a.5').attr('href', '#1').on('click', () => manualDis(1))
-
+            const $slide = createProjectImage(element).attr('class', `${i}`)//.on('click', () => manualDis(i+1))
+            const $divx = $('<div>').attr('id', `${i}`).attr('class', 'slide')
             $($divx).append($slide)
             $('.slider').append($divx)
-            $(`a.${i}`).attr('href', `#${i+1}`).on('click', () => manualDis(i+1))
-        });   
-        
+        //Makes the slider function
+    
+          $(`a.${i}`).attr('href', `#${i+1}`).on('click', () => manualDis(i+1))
+        })
+    //Slide reset
+    
+    let children = $('.slider').children().length
+    $(`a.${children}`).off()
+    $(`a.${children}`).attr('href', '#1').on('click', () => manualDis(1))
+             
     }
+//------------------------------------------------------------------------
+                            //Google Form Stuff
 
 const formUrl ='https://docs.google.com/forms/d/e/1FAIpQLSfPAVCO56MAEQIJwd8JpY_NjagiqH5GTVWfZ739f_9WKaO2sw/formResponse'
 
