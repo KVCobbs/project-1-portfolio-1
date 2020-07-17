@@ -283,13 +283,21 @@
     }
     .descriptions {
         margin: 30px auto;
+        background-color: rgba(128, 222, 234, 0.6);
+        border: 3px solid var(--accent-variant);
+    }
+    #import {
+        font-size: 20px;
     }
     .space {
-        height: 20px;
+        height: 40px;
     }
     /*Last page*/
     .contact > p {
         margin: 0 25px;
+    }
+    .contact > h2 {
+        background-color: var(--main-color);
     }
     .message {
         width: 85%;
@@ -298,7 +306,7 @@
         border-radius: 8px;
     }
     input{
-        width: 85%;
+        width: 65%;
         margin: 0 35px;
     }
     button {
