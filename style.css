@@ -12,13 +12,19 @@ nav {
     display: flex;
     justify-content: space-evenly;
     margin: 0 auto;
-    background-color: grey;
+    background-color: var(--main-variant);
+    border-bottom: var(--accent-main);
     height: 60px;
     width: 100%;
 }
 nav > a {
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
     font-size: 30px;
-    
+    color: var(--accent-variant);
+}
+.menub{
+    display: none;
 }
 
 .icon {
@@ -29,16 +35,16 @@ nav > a {
 .contain {
     display: grid;
     text-align: center;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     grid-template-columns: [a] 1fr [b] .5fr [c];
     grid-template-rows: [d] .25fr [e] .25fr [f] .50fr [g];
 }
 
 .image{
-    margin: auto;
     grid-column: b/c;
     grid-row: d/e;
+    background-color: var(--main-color);
 }
 .image > img {
     margin-top: 20px;
@@ -49,11 +55,13 @@ h2 {
     font-size: 55px;
     margin: 0;
     grid-column: b/c;
+    background-color: var(--main-color);
 }
 .content {
     display: none;
 }
 .bigtext {
+    background-color: #FFECb3;
     grid-column: a/b;
     grid-row: d/g;
     border-right: 2px black solid;
@@ -66,6 +74,7 @@ h2 {
 .info {
     grid-row: f/g;
     grid-column: b/c;
+    background-color: var(--main-color);
 }
 .info > h3 {
     position: relative;

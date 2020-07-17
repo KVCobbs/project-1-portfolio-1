@@ -27,7 +27,6 @@
         display: grid;
         grid-template-columns: [a] 1fr [b] 1fr [x] 1fr [c] 1fr[d];
         grid-template-rows: [e] 1fr [f];
-        background-color:var(--main-color);
         text-align: left;
         height: 60px;
         width: 100%;
