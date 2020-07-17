@@ -294,7 +294,9 @@
     }
     /*Last page*/
     .contact > p {
-        margin: 0 25px;
+        display: block;
+        font-size: 15px;
+
     }
     .contact > h2 {
         background-color: var(--main-color);
@@ -317,12 +319,19 @@
         display: grid;
         grid-template-columns: [a] 1fr [b] 1fr [c];
         text-align: center;
-        
+        background-color: var(--accent-variant);
+        border-top: 6px solid var(--accent-light);
     }
-    .one > img {
+    .one > h3 {
+        font-size: 15px;
+    }
+    .one > i {
         margin: 0 10px;
     }
-    .two > img {
+    .two > h3 {
+        font-size: 15px;
+    }
+    .two > i {
         margin: 0 auto;
     }
 }

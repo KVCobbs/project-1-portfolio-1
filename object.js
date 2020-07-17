@@ -34,61 +34,54 @@ fetch(url)
         console.log(data)
 
 
-    const  createProjectElement  = (project) => {
+        const  createProjectElement  = (project) => {
         const $div = $('<div>')
         $div.append($('<h2>').text(project.title))
         $div.append($('<p>').text(project.description))
-        $('.hold').attr('src', project.image)
         $div.append($('<a>').attr('href', project.url).text('link'))
         return ($div)
+        }
+        
+        const  createProjectImage  = (project) => {
+            let $a = $('<a>') 
+            let $img =$('<img>').attr('src', project.image)
+            $a.append($img)
+            return ($a)
+            }
+        
+        
+        
+        const manualDis = function(x) {
+            $('#temp').remove()
+            $('#import').remove()
+            
+            x-= 1
+            $projectDiv = createProjectElement(data[x])
+            $projectDiv.attr('id', 'temp')
+            $('.descriptions').prepend($projectDiv)
+            
+            };
+            
+        //creates the buttons dynamically!
+        data.forEach((element, i) => {
+            i += 1
+            const $a = $('<a>').text(`${i}`).attr('href',`#${i}`).on('click', () => manualDis(i)) //anonymous function
+            const $div = $('<div>').append($a)
+            $('#jump').append($div)
+
+        //This part makes image into slide
+            const $slide = createProjectImage(element).attr('class', `${i}`).on('click', () => manualDis(i+1))
+            const $divx = $('<div>').attr('id', `${i}`).attr('class', 'slide')
+           
+            //$('a.5').attr('href', '#1').on('click', () => manualDis(1))
+
+            $($divx).append($slide)
+            $('.slider').append($divx)
+            $(`a.${i}`).attr('href', `#${i+1}`).on('click', () => manualDis(i+1))
+        });   
+        
     }
-        
-        
-    //$('body').append(createProjectElement(data[0]))
-    //function
-    const manualDis = function(x) {
-        $('#temp').remove()
-        $('#import').remove()
-        
-        x-= 1
-        $projectDiv = createProjectElement(data[x])
-        $projectDiv.attr('id', 'temp')
-        $('.descriptions').prepend($projectDiv)
-        
-            // switch(true){
-            // case (x == 1):
-            //     const $projectDiv = createProjectElement(data[x])
-            // $('body').append($projectDiv)
-            // break;
-            // case (x == 2):
-            //     const $projectDiv = createProjectElement(project)
-            // $('body').append($projectD0iv)
-            // break;
-            // case (x == 3): 
-            //     const $projectDiv = createProjectElement(project)
-            //     $('body').append($projectDiv)
-            // break;
-            // case (x == 4) :
-            //       const $projectDiv = createProjectElement(project)
-            //     $('body').append($projectDiv)
-            // break;
-            // case (x == 5):
-            //     const $projectDiv = createProjectElement(project)
-            // $('body').append($projectDiv)
-            // break
-        };
-        
-    //creates the buttons dynamically!
-    data.forEach((element, i) => {
-        i += 1
-        const $a = $('<a>').text(`${i}`).attr('href',`#${i}`).on('click', () => manualDis(i)) //anonymous function
-        const $div = $('<div>').append($a)
-        $(`a.${i}`).attr('href', `#${i + 1}`).on('click', () => manualDis(i+1))
-        $('a.5').attr('href', '#1').on('click', () => manualDis(1))
-        $('#jump').append($div)
-    });   
-    
-}
+
 const formUrl ='https://docs.google.com/forms/d/e/1FAIpQLSfPAVCO56MAEQIJwd8JpY_NjagiqH5GTVWfZ739f_9WKaO2sw/formResponse'
 
 const formSubmit = () => {
