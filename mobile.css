@@ -139,7 +139,7 @@
             border-bottom: 2px black solid;
             margin: 15px auto 15px auto ;
         }
-    .a, .b{
+    .d{
         margin: auto;
         width: 65%;
     }
@@ -147,8 +147,8 @@
     .info > h1 {
         font-family: 'Lora', serif;
         font-size: 25px;
-        margin-top: 20px;
         margin-bottom: 0;
+        margin-top: 10px;
     }
     .info > h3 {
         font-family: 'Lora', serif;
@@ -156,10 +156,17 @@
         margin-top: 0;
         
     }
+    .info {
+        width: 60%;
+        height: 100px;
+        margin: 0 auto;
+        border: 5px solid var(--accent-variant);
+        background-color: var(--accent-main);
+    }
     p{
         font-family: 'Lato', sans-serif;
         margin: 10px;
-        padding: 5px 35px;
+        padding: 5px 30px;
     }
     .bigtext {
         display: block;
@@ -203,13 +210,18 @@
        }
     .projects, footer{
         display: block;
-        background-color: gray;
-        width: 620px;
         padding: 10px 0;
         width: 90%;
+        width: 100%;
+        background-color: #FFECb3;
+        text-align: center;
+        margin: 0 auto;
     }
     .projects > h2 {
         font-size: 30px;
+        height: 30px;
+        padding: 10px 0 10px 0;
+        background-color: var(--main-color);
     }
     /*css Carousel*/
     .carousel {
@@ -226,35 +238,51 @@
         overflow-x: hidden;
         -webkit-overflow-scrolling: touch;
         scroll-snap-type: x mandatory;
-        margin: auto;
+        margin: 1px auto;
+        border-radius: 12px;
+        box-shadow: 7px 10px rgba(75, 172, 184, 0.6);
     }
     .slider > div {
         scroll-snap-align: center;
     }
     .slide{
-        width: 400px;
+        width: 100%;
         flex-shrink: 0;
         height: 100%;
     }
     .slide > img {
         height: 300px;
-        width: 400px;
+        width: 800px;
     }
     #jump {
+        margin-top: 20px;
         margin-bottom: 10px;
         text-align: center;
     }
     #jump > div {
-        text-align: center;
         display: inline-block;
-        width: 50px;
-        background-color: lightgray;
-        border-radius: 64px;
+        width: 40px;
+        height: 30px;
+        margin: 0 5px;
+        border-radius: 12px;
+        background-color: var(--main-color);
+
+    }
+    #jump > div >a {
+        display: block;
+        font-size: 20px;
+        position: relative;
+        top: 2px;
+        text-decoration: none;
+        color: black;
     }
     .descriptions > img, .skills > img {
         width: 100px;
         height: 100px;
         margin: 10px 0;
+    }
+    .descriptions {
+        margin: 30px auto;
     }
     .space {
         height: 20px;
