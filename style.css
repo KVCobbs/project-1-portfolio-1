@@ -9,6 +9,9 @@
     --accent-color:#b4ffff;
     --accent-variant:#4bacb8;
 }
+body {
+    margin: 0;
+}
 nav {
     display: flex;
     justify-content: space-evenly;
@@ -80,14 +83,20 @@ h2 {
     text-align: left;
 }
 .info {
+    width: 60%;
+    height: 100px;
+    margin: 0 auto;
+    border: 5px solid var(--accent-variant);
+    background-color: var(--accent-main);
     grid-row: f/g;
     grid-column: b/c;
     
 }
-.info > h3 {
-    position: relative;
-    top: 20px;
+.info > h1{
+    margin-bottom: 0;
+    margin-top: 10px;
 }
+
 .bigtext > h3:first-child{
     margin-top: 30px;
 }
@@ -117,7 +126,7 @@ h2 {
     grid-template-columns: [a]1fr[b].5fr[c];
     background-color: #FFECb3;
 }
-.projects > h2 {
+.projects > h2, .contact h2 {
     font-size: 45px;
     height: 60px;
     grid-row: a/b;
@@ -180,7 +189,8 @@ h2 {
 }
 .descriptions{
     text-align: center;
-    background-color: darkgrey;
+    background-color: rgba(128, 222, 234, 0.6);
+    border: 3px solid var(--accent-variant);
     width: 80%;
     margin: 0 auto;
     padding: 25px;
@@ -191,6 +201,9 @@ h2 {
     width: 100px;
     height: 100px;
     margin: 10px ;
+}
+#temp > p,   #import {
+    font-size: 30px;
 }
 .space {
     height: 20px;
@@ -215,17 +228,48 @@ h2 {
 }
 
 /*PAGE THREE SPECIFICS*/
+.space {
+    display:none;
+}
 .contact {
-    width: 90%;
-    margin:30px auto;
+    width: 100%;
+    background-color: #FFECb3;
     text-align: center;
+    margin: 0;
+    padding: 10px;
+    
 }
 .contact >h2 {
     font-size: 40px;
 }
+.contact > p {
+    font-size: 20px;
+    margin: 15px;
+    font-family: 'Lato', sans-serif;
+}
 button {
     display: block;
     margin: 10px auto;
+}
+input, textarea {
+    width: 60%;
+    height: 30px;
+    font-size: 20px;
+}
+textarea{
+    height: 70px;
+    border-radius: 8px;
+}
+.submit {
+    position: relative;
+    top: 10px;
+    left: 246px;
+    font-size: 20px;
+    height: 30px;
+    width: 10%;
+    border-radius: 8px;
+    margin: 0;
+    margin-bottom: 20px;
 }
 /*footer*/
 footer { 
@@ -233,12 +277,14 @@ footer {
     grid-template-columns: [a] 1fr [b] 1fr [c];
     text-align: center;
     width: 100%;
-    margin: 0 auto;
-    background-color: grey;
+    margin: 0 ;
+    background-color: var(--accent-variant);
+    border-top: 6px solid var(--accent-main);
 }
-.one > img {
-    margin: 0 10px;
+.one > h3, .two > h3 {
+    margin: 15px 0 0 0;
 }
-.two > img {
-    margin: 0 auto;
+.one > i, .two > i{
+    font-size: 40px;
+    margin: 15px;
 }

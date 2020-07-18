@@ -279,14 +279,10 @@
     }
     .descriptions {
         margin: 30px auto;
-        background-color: rgba(128, 222, 234, 0.6);
-        border: 3px solid var(--accent-variant);
+        
     }
-    #temp > p {
+    #temp > p,   #import {
         font-size:20px;
-    }
-    #import {
-        font-size: 20px;
     }
     .space {
         height: 40px;
@@ -303,15 +299,17 @@
     .message {
         width: 85%;
         margin: 0 35px;
-        height: 100px;
-        border-radius: 8px;
+       
     }
     input{
         width: 65%;
         margin: 0 35px;
     }
-    button {
+    .contact > button {
         display: block;
+        font-size: 15px;
+        height: 25px;
+        width: 10%;
         margin: 20px 0 15px 35px;
     }
     footer{
@@ -319,12 +317,13 @@
         grid-template-columns: [a] 1fr [b] 1fr [c];
         text-align: center;
         background-color: var(--accent-variant);
-        border-top: 6px solid var(--accent-light);
+        border-top: 6px solid var(--accent-main);
     }
     .one > h3 {
         font-size: 15px;
     }
     .one > i {
+        font-size: 30px;
         margin: 0 10px;
     }
     .two > h3 {
