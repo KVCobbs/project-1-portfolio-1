@@ -31,11 +31,12 @@
         height: 60px;
         width: 100%;
         margin: 0;
+        border-bottom: solid 4px var(--accent-main);
+        border-left: none;
+        background-color: var(--main-color);
     }
-    nav > a{
-        font-family: 'Lato', sans-serif;
-        color: var(--accent-variant);
-        text-decoration: none;
+    nav > a{ 
+        
         font-size: 20px;
         margin: 5px auto;
         padding: 10px 10px;
@@ -58,7 +59,7 @@
     .burger{
         width: 50px;
         height: 6px;
-        background: var(--accent-variant);
+        background: var(--accent-main);
         border-radius: 5px;
         box-shadow: 0 2px 5px rgba(255,100, 47, .2);
         transition: all .5s ease-in-out;
@@ -68,7 +69,7 @@
         position: absolute;
         width: 50px;
         height: 6px;
-        background:var(--accent-variant);
+        background:var(--accent-main);
         border-radius: 5px;
         box-shadow: 0 2px 5px rgba(255,100, 47, .2);
         transition: all .5s ease-in-out;
@@ -120,7 +121,7 @@
         align-items: center;
         padding: 10px;
         margin: 30px auto 30px auto;
-        border-radius: 32px;
+        box-shadow: none;
         background-color: var(--accent-light);
     }
     #logo{
@@ -171,13 +172,13 @@
         display: block;
         margin: 30px 0px 0px 0px;
         border: none;
+        background-color: #FFECb3;
+
     }
-    .bigtext > h3 {
-       display: none;
-    }
+    
     h3:nth-child(3) {
         display: block;
-        margin: 0 0 10px 0;
+        margin: 30px 0 0px 0;
     }
 
     .skills{
@@ -220,6 +221,7 @@
         font-size: 30px;
         height: 30px;
         padding: 10px 0 10px 0;
+        border: 0;
         background-color: var(--main-color);
     }
     /*css Carousel*/
@@ -259,16 +261,11 @@
         text-align: center;
     }
     #jump > div {
-        display: inline-block;
         width: 40px;
-        height: 30px;
-        margin: 0 5px;
-        border-radius: 12px;
-        background-color: var(--main-color);
-
+    height: 30px;
+    margin: 0 5px;
     }
     #jump > div >a {
-        display: block;
         font-size: 20px;
         position: relative;
         top: 2px;
