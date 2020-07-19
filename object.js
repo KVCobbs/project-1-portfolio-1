@@ -16,8 +16,6 @@ const form = 'https://spreadsheets.google.com/feeds/list/1XPBFwhTM6bRryjSDFnR0ty
 fetch(url)
     .then( response => response.json())
     .then (data => {
-         //console.log('data', data)
-        console.log(data.feed.entry)
         const projects = data.feed.entry.map( entry => {
             return {
                 title: entry.gsx$title.$t,
@@ -30,8 +28,7 @@ fetch(url)
         })
 
     const app = (data) => {
-        console.log('app is running')
-        console.log(data)
+        
 
     //Description generator
         const  createProjectElement  = (project) => {
@@ -56,9 +53,7 @@ fetch(url)
         const manualDis = function(x) {
             $('#temp').remove()
             $('#import').remove()
-            console.log(`this is x: ${x}`) 
             x-= 1
-            console.log(`this is x after: ${x}`)
             $projectDiv = createProjectElement(data[x])
             $projectDiv.attr('id', 'temp')
             $('.descriptions').prepend($projectDiv)
@@ -74,9 +69,7 @@ fetch(url)
         //creates the buttons dynamically!
        
         data.forEach((element, i) => {
-            console.log(`this is i: ${i}`)
             i += 1
-            console.log(`this is i after: ${i}`)
             const $a = $('<a>').text(`${i}`).attr('href',`#${i}`).on('click', () => manualDis(i)) //anonymous function
             const $div = $('<div>').append($a)
             $('#jump').append($div)
@@ -127,7 +120,6 @@ const formSubmit = () => {
     })
     .then(res => {
           // clear the fields and give the user feedback
-          console.log(res.body);
           name.val('');
           email.val('');
           phone.val('');

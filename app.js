@@ -5,9 +5,6 @@ const hide = function(){
     $('.navb').hide()
 }
 
-function test(){
-    console.log('Clicky')
-}
 
 // function getInput() {
 //     let name = $('.name').val()

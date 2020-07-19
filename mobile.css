@@ -1,4 +1,4 @@
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
    
     
     body {
@@ -291,6 +291,7 @@
     .contact > p {
         display: block;
         font-size: 15px;
+        padding: 0;
 
     }
     .contact > h2 {
@@ -305,11 +306,14 @@
         width: 65%;
         margin: 0 35px;
     }
-    .contact > button {
+    .submit {
         display: block;
+        position: relative;
+        top: 10px;
+        left: 10px;
         font-size: 15px;
         height: 25px;
-        width: 10%;
+        width: 100px;
         margin: 20px 0 15px 35px;
     }
     footer{
@@ -318,18 +322,15 @@
         text-align: center;
         background-color: var(--accent-variant);
         border-top: 6px solid var(--accent-main);
+        text-decoration: none;
     }
-    .one > h3 {
+    .one > h3,  .two > h3 {
         font-size: 15px;
+        margin-bottom: 5px;
     }
-    .one > i {
+    .one > a, .two > a {
         font-size: 30px;
-        margin: 0 10px;
-    }
-    .two > h3 {
-        font-size: 15px;
-    }
-    .two > i {
-        margin: 0 auto;
+        margin: 50px 10px;
+        color: var(--main-color);
     }
 }

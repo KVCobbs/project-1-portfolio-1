@@ -261,14 +261,11 @@ textarea{
     border-radius: 8px;
 }
 .submit {
-    position: relative;
-    top: 10px;
-    left: 246px;
     font-size: 20px;
     height: 30px;
     width: 10%;
     border-radius: 8px;
-    margin: 0;
+    margin: 10px auto;
     margin-bottom: 20px;
 }
 /*footer*/
