@@ -297,6 +297,7 @@
     }
     .contact > h2 {
         background-color: var(--main-color);
+        height: auto;
     }
     .message {
         width: 85%;
