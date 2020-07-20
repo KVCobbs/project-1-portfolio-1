@@ -127,7 +127,7 @@
     #logo{
         position: relative;
         bottom: 15px;
-        margin: 0 ;
+        margin: 0 0 40px 0 ;
         font-size: 50px;
         font-family: 'Lora', serif;
 }
@@ -221,6 +221,7 @@
         font-size: 30px;
         height: 30px;
         padding: 10px 0 10px 0;
+        margin: 0;
         border: 0;
         background-color: var(--main-color);
     }

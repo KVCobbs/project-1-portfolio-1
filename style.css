@@ -122,6 +122,7 @@ a:hover {
 .projects {
     width: 100%;
     margin: 0 auto;
+    padding: 30px 0;
     display: grid;
     text-align: center;
     grid-template-rows: [a] .25fr [b] 1fr [c] .25fr[d];
@@ -238,11 +239,11 @@ a:hover {
     background-color: #FFECb3;
     text-align: center;
     margin: 0;
-    padding: 10px;
-    
+    padding-bottom: 10px;
 }
 .contact >h2 {
     font-size: 40px;
+    margin-top: 0;
 }
 .contact > p {
     font-size: 20px;
