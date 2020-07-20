@@ -39,7 +39,32 @@ Time matrix, wireframes and inspiration are in the project worksheet docx:
     let children = $('.slider').children().length
     $(`a.${children}`).off()
     $(`a.${children}`).attr('href', '#1').on('click', () => manualDis(1))
+ 
     ```
+## Time Frame
+   | Feature                                  | Priority | Estimated Time | Time Invested | Actual Time  |
+|------------------------------------------|----------|----------------|---------------|--------------|
+| Mobile Recreation                        | H        | 6 hrs          | 5hrs 58mins   | 5hrs 58mins  |
+| Hamburger Menu                           | H        | 3hr            | 1hrs 30mins   | 1hrs 30mins  |
+| Fonts + colors                           | M        | 2hr            | 5hrs 0mins    | 5hrs 0mins   |
+| Carousel                                 | H        | 6hrs           | 2hrs 45mins   | 2hrs 45mins  |
+| Contact form functionality               | H        | 2.5hrs         | 6 hrs         | 6 hrs        |
+| Carousel manipulation                    | M        | 1.5hr          | 2hrs          | 2hrs         |
+| Jquery Update                            | M        | 1.5hr          | 3 hr 26mins   | 3 hr 26mins  |
+| Push Project                             | H        | 2.5hr          | 1hr           | 1hr          |
+| Projects Live                            | H        | 2hr            | 1hr           | 1hr          |
+| Desktop recreation                       | H        | 3hrs           | 5 hr 20 mins  | 5 hr 20 mins |
+| Total                                    | -        | 30 hrs         | 32hrs 16mins  | 33hrs 16mins |
+|                                          |          |                |               |              |
+| POST MVP                                 |          |                |               |              |
+|                                          |          |                |               |              |
+| Feature                                  | Priority | Estimated Time | Time Invested | Actual Time  |
+| Finish logo, original photos             | L        | 3hr            | N/A           | N/A          |
+| Alter tablet view to match tablet mockup | H        | 1hr            | N/A           | N/A          |
+| Total                                    | -        | 4hr            | N/A           | N/A          
+
+
+
 ## Issues and Resolutions
     Post Error 400 [google form]
         When setting up the custom made form I had created, to a google form I got error 400 multiple times. The error was caused by googles email verification software. Due to the fact that I was testing my form using gibberish and had collect emails checked in my google form, the post request was constantly getting canceled. Removing that option solved the issue
