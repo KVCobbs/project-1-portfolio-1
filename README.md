@@ -3,6 +3,8 @@
 
 This project is creating a website to showcase the work that i’ve done so far in the General Assembly bootcamp. It also tells the internet little things about myself.
 
+Site deployed via netlift
+    [Project](https://ebsonari.netlify.app/)
 ## Planning Documents
 
 Time matrix, wireframes and inspiration are in the project worksheet docx:
